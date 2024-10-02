@@ -1,0 +1,186 @@
+<div id="introduction-to-limits">
+    <h2>Introduction to Limits</h2>
+    <div id="sequences">
+        <h3>Sequences:</h3>
+        <p>
+
+            <a
+                href="https://drive.google.com/drive/folders/11iksh6qbTwNZI8n-KdBySod2HXEGcWjh?usp=drive_link">ClassNotes</a>
+        </p>
+        <div id="infinitely-large-sequences">
+            <b>&bullet; Infinitely Large Sequence:</b>
+
+            <p>
+                A sequence $\{a_n\}$ is called infinitely large if $ \forall K \in \mathbb{R}$ $\exists
+                n_{k}
+                \in
+                \mathbb{N}$ such that $|a_n|>K$ $\forall n\geq n_k$.
+            </p>
+
+            <p>
+                <b>Understanding What this means:</b>
+                This means you have a sequence and you are going for larger and larger terms for example you
+                have a
+                sequence $\{a_n\}$ now, let's say you choose $2024 \in \mathbb{R}$ then as the sequence is
+                getting
+                larger and larger after a certain time you must find a term $a_N$ such that $a_N>2024.$ <br>
+                Now, it may be two sided or one sided infinity as we go along the sequence and that is to
+                say
+                the
+                sequence can either go to $\infty$ or $-\infty$ or both simultaneosly. <br>
+            </p>
+
+            <p>
+                <b>Why we need this?</b>
+                You may wonder that wtf? We can simply say:
+                $$\lim_{n \to \infty}a_n=\infty$$
+                But then why this kid of gargons?<br>
+                The answer is tricky but simple concept of analysis that you must understand. <br>
+                The reason is how you know what is infinity? This is not a number right! Do you know what
+                number
+                is
+                infinity? Then how can you invoke it in mathematics? You cann't do any mathematical
+                operations
+                with
+                it. Then you can't techmically write some real number $x=\infty$. This is wrong. That's why
+                we
+                need
+                to bring the actual meaning of $\infty$ which is so large that we can't bound it by any real
+                number
+                say $K$. That's why this is said that $\nexists K \in \mathbb{R}$ such that $\infty \leq K$
+                or
+                $\forall K \in \mathbb{R}$, $K>\infty$.
+            </p>
+
+            <p>
+                <b>Velocity:</b>
+                Lets define the velocity of a sequence by
+                $$v=\frac{K}{n_K}$$
+                <b>Example1:</b>
+                Now, for the following sequence $\{a_n\}=\{1,2,3,4,5, \dots\}$ we have for any $K \in
+                \mathbb{R}$, $n_K= \lfloor K \rfloor+1$. ( <a href="">Verify</a> ). <br>
+                Now, $v=\frac{K}{\lfloor K \rfloor+1}$.
+            </p>
+
+            <p>
+                <b> Example2: </b>
+                Consider the sequence:
+                $$
+                a_1=1 \\
+                a_2=1+ \frac{1}{2} \\
+                a_3=1+ \frac{1}{2}+\frac{1}{3} \\
+                a_4=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}\\
+                \vdots \\
+                a_n=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}+ \dots +\frac{1}{n}\\
+                $$
+            </p>
+
+            <p>
+                <b>Velocity Calculation:</b>
+                Observe that,
+                $$a_n=1+ \frac{1}{2} +\frac{1}{3} + \frac{1}{4}+ \dots +\frac{1}{n} =1+ (\frac{1}{2})
+                +(\frac{1}{3} + \frac{1}{4})+ \dots +\frac{1}{n}\\ >1+
+                \frac{1}{2}+(\frac{1}{4}+\frac{1}{4})+\dots + \frac{1}{n}\\
+                =1+\frac{1}{2}+\frac{1}{2}+\dots+\frac{1}{n}$$
+                So, for $K \in \mathbb{R}$ we need $n_K\geq2^{K}$. <br>
+                Then $v\leq \frac{K}{2^K}$
+            </p>
+
+            <p>Now, compare $v_1=\frac{K}{\lfloor K \rfloor+1}$ and $v_2\leq \frac{K}{2^K}$ <br>
+
+                Cleraly, $v_1>>v_2$. <br>
+
+                <b>Moral:</b>
+                $v_2 << v_1$ but it is steady, so gradually it blows to $\infty$. </p>
+        </div>
+
+        <div id="infinitely-small-sequences">
+            <b>&bullet; Infinitely Small Sequences:</b>
+            <p>
+                Definition: A sequence $\{a_n\}$ is called infinitely small if
+                $$\lim_{n \to \infty}a_n=0$$
+                that is, $|a_n|<\varepsilon$ $\forall n\geq \eta_\varepsilon$. </p>
+
+                    <p>
+                        <b>Question:</b>
+                        Try to think of how to interpret it as before? Can you see some similarity bewteen
+                        <a href="#infinitely-small-sequences">infinitly small</a> and <a
+                            href="#infinitely-large-sequences">infinitely large sequences?</a><br>
+                        Try to think by your own then check
+                        <b><a href="https://atrajit-sarkar.github.io/Answers#question-1">answer</a></b>.
+                    </p>
+        </div>
+
+        <div id="cauchy-sequences">
+            <b>&bull; Cauchy Sequences:</b>
+            <p>
+                <a
+                    href="https://drive.google.com/file/d/12DnupJ8Dqi1hEDB1q8_TmIga1GMqfGMA/view?usp=sharing">ClassNotes</a>
+            </p>
+
+            <p>
+                <b>Definition:</b>
+                A sequence $\{a_n\}$ is called cauchy iff $\forall \varepsilon>0$, $\exists K \in
+                \mathbb{N}$
+                such that $\forall m,n \geq K$ <br>$|a_n-a_m|<\varepsilon$. </p>
+
+                    <p>
+                        <b>Notice:</b>
+                        If we fix $m=K$ then $|a_n-a_K|<\varepsilon$ $\forall n\geq K$. <br>
+                            This implies that cauchy sequence is bounded.
+                    </p>
+
+                    <p>
+                        <b>Also Notice: Cauchy sequence cann't oscillate.</b> <br>
+                        <b>Proof:</b>
+                        Let $\{a_n\}$ be a cauchy sequence. Now, let it be oscillatory(If possible). Now, let
+                        $\{a_{n_k}\}$ be a convergent subsequence of $\{a_n\}$. Then we have,
+                        $$\lim_{k \to \infty}a_{n_k}=l$$
+                        <br>
+                        then by definiton of limit, for $\frac{\varepsilon}{2}$ we have a $N_1 \in \mathbb{N}$
+                        such that <br>
+                        $\forall n_k \geq N_1 \implies$ $|a_{n_k}-l|<\frac{\varepsilon}{2}$....(1) </p>
+
+                            <p>
+                                As $\{a_n\}$ is cauchy, we have a $N_2 \in \mathbb{N}$ such that <br> $\forall
+                                m,n\geq N_2 \implies |a_m-a_n|<\frac{\varepsilon}{2}$.......(2) </p>
+
+                                    <p>
+                                        Consider $max\{N_1,N_2\}=N$, then equation (1) and (2) holds togethre,
+                                        and
+                                        giving us something interesting. <br>
+                                        We can think $m=n_k$ now and can say $\forall n_k and n \geq N$ we have,
+                                        $|a_{n_k}-a_n|<\frac{\varepsilon}{2}$. Now, adding This with equation
+                                            (1) we get $|a_{n_k}-l|+|a_{n_k}-a_n|<\varepsilon$. <br>
+
+                                            By triangluar inequality we get, <br>
+                                            $$|a_n-l| \leq |a_{n_k}-l|+|a_{n_k}-a_n|<\varepsilon$$ And here we
+                                                get by definiton of limit $$\lim_{n \to \infty}a_n=l$$ </p>
+
+                                                <p>
+                                                    So, moral is oscillation simply means convergence and cauchy
+                                                    sequence can't diverge. Together we get, only way a cauchy
+                                                    sequence can't converge is the point of convergence is not
+                                                    inside the set.
+                                                </p>
+                                                <hr>
+                                                <p>
+                                                    <b>Question:</b>
+                                                    Find an example of cauchy sequence.[Hint: Use a set that
+                                                    don't have GLB or LUB]. <br>
+                                                    <b>Question:</b>
+                                                    Why the hint works? <br>
+                                                    <b>Question:</b>
+                                                    Prove that a covergent sequence is always cauchy in the real
+                                                    analysis ofcourse.(not in general. forget about the thing, I
+                                                    just wrote it so that when you grow up and read much deeper
+                                                    about analysis and you might came back here and start juding
+                                                    my knowledge.)
+                                                </p>
+                                                <hr>
+        </div>
+    </div>
+
+
+
+</div>
